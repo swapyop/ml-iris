@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>IRIS Prediction with Flask</title> 
+  <link rel="stylesheet" href="../static/css/style.css">  
+  </head>
+  <meta name="viewport" content="width=550; user-scalable=0;" />
+ <div class="login">
+  <h1>Predict Iris Flower Species</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="sepal_length" placeholder="Enter Sepal len in cm, e.g, 6.4" required="required" />
+      <input type="text" name="sepal_width" placeholder="Enter Sepal wid in cm, e.g, 2.8" required="required" />
+      <input type="text" name="petal_length" placeholder="Enter Petal len in cm, e.g, 5.1" required="required" />
+      <input type="text" name="petal_width" placeholder="Enter Petal wid in cm, e.g, 1.5" required="required" />      
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   <strong>{{prediction_text}}</strong>
+    <br>
+    <br>
+    <br>
+    <br>
+   <strong>Check this project out on <a style="color: rgba(242,121,0,1);" href="https://github.com/Viswalahiri/iris-ml-web-app">GitHub</a></strong>
+    <br>
+    <br>
+   <strong>Made with ❤️ by <a style="color: rgba(242,121,0,1);" href="https://github.com/Viswalahiri">Viswalahiri</a></strong>
+ </div>
+</body>
+</html>
